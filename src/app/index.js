@@ -5,17 +5,20 @@ import {Header} from "./components/Header";
 import {Home} from "./components/Home";
 
 class App extends React.Component {
+    onGreet() {
+        alert("Hello!");
+    }
     render() {
         return (
             <div className="container">
                 <div className="row">
                     <div className="col-10 offset-1">
-                        <Header/>
+                        <Header homeLink="Home"/>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-10 offset-1">
-                        <Home name={"Ben"} initialAge={28}/>
+                        <Home name={"Ben"} initialAge={28} greet={this.onGreet}/>
                     </div>
                 </div>
             </div>

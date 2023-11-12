@@ -24,10 +24,13 @@ export class Home extends React.Component {
         console.log("comp did mount");
     }
     componentWillReceiveProps(nextProps, nextContext) {
-        console.log("comp will receive propts, " + nextProps);
+        console.log("comp will receive props, " + nextProps);
     }
     shouldComponentUpdate(nextProps, nextState, nextContext) {
         console.log("should comp update, " + nextProps, nextState);
+        // if (nextState.status === 1) {
+        //     return false
+        // }
         return true;
     }
     componentWillUpdate(nextProps, nextState, nextContext) {
